@@ -89,12 +89,50 @@
 @mixin footerfont
 {
    font-family: 'Lato', sans-serif;
-  font-weight: 100; font-style: normal;
+  font-weight: 300; font-style: normal;
   font-size: 1.2rem;
 }
 
-@mixin highlightBg
+@mixin highLightText
 {
-  background-color: rgba(119,136,153, 0.7);
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 300; font-style: normal;
+  font-size: 3rem;
+}
+
+@mixin nav1Text{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 300; font-style: normal;
+  font-size: 1.7rem;
+}
+
+@mixin h3Text{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 400; font-style: normal;
+  font-size: 2.8rem;
+}
+
+@mixin h4Text{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 300; font-style: normal;
+  font-size: 2.6rem;
+}
+
+@mixin blueText{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 300; font-style: italic;
+  font-size: 1.6rem;
+}
+
+@mixin timeText{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 400; font-style: normal;
+  font-size: 1.6rem;
+}
+
+@mixin learnText{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 300; font-style: italic;
+  font-size: 1.6rem;
 }
 
