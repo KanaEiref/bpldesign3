@@ -59,7 +59,8 @@ you can use the generic selector below, but it's slower:
   content: "\74"; }
 
 .icon-user:before {
-  content: "\70"; }
+  content: "\70";
+  font-size: 2.5rem; }
 
 .icon-twitter:before {
   content: "\77"; }
@@ -190,8 +191,8 @@ header[role=banner] {
   background-color: rgba(76, 117, 138, 0.7);
   position: fixed;
   top: 0;
-  box-shadow: 0px 3px 5px 1px #888888;
-  z-index: 9999; }
+  z-index: 9999;
+  box-shadow: 0px 3px 5px 1px #888888; }
 
 .logo {
   font-size: 20px;
@@ -201,12 +202,21 @@ header[role=banner] {
   font-style: normal; }
 
 #signIn {
-  float: right; }
+  float: right;
+  padding-top: 1.5rem;
+  margin-right: 2rem;
+  display: inline-block; }
+  #signIn span {
+    margin-top: 2rem; }
+  #signIn a {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    vertical-align: top; }
 
 #search-form {
   float: right; }
 
-#bpl, #signIn {
+#bpl {
   display: inline-block;
   padding: 1rem; }
 
@@ -301,29 +311,17 @@ form #searchBg {
 
 #nav2 {
   margin-top: 4rem;
-  margin-right: auto;
-  margin-left: auto;
-  clear: both;
-  text-align: center;
-  width: 100%; }
+  text-align: center; }
   #nav2 ul {
     list-style-type: none;
     text-align: center;
     margin: 0;
-    padding: 0;
-    width: 100%;
-    display: table;
-    overflow: hidden;
-    position: relative;
-    left: 30%; }
+    padding: 0; }
   #nav2 ul li {
-    display: inline;
-    float: left;
+    display: inline-block;
     height: 13rem;
     width: 13rem;
-    margin-right: 0.5rem;
-    background-color: #009eb0;
-    color: #fffce5; }
+    margin-right: 0.5rem; }
   #nav2 a {
     display: block;
     width: 100%;

@@ -116,8 +116,9 @@ header[role=banner]{
 	background-color: rgba(76, 117, 138, 0.7);
 	position: fixed;
 	top:0;
-	box-shadow: 0px 3px 5px 1px #888888;
 	z-index:9999;
+	box-shadow: 0px 3px 5px 1px #888888;
+
 }
 
 .logo{	
@@ -128,13 +129,26 @@ header[role=banner]{
 
 #signIn{
 	float: right;
+    padding-top: 1.5rem;
+	margin-right: 2rem;
+	display: inline-block;
+
+	span{
+		margin-top: 2rem;
+	}
+
+	a{
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+		vertical-align: top;
+	}
 }
 
 #search-form{
 	float: right;
 }
 
-#bpl, #signIn{
+#bpl{
 	display: inline-block;
 	padding: 1rem;
 }
@@ -240,12 +254,12 @@ form #searchBg{
 }
 
 #nav2{
-	margin-top: 4rem;
-	margin-right: auto;
-	margin-left: auto;
-	clear: both;
+	 margin-top: 4rem;
+	// margin-right: auto;
+	// margin-left: auto;
+	// clear: both;
 	text-align: center;
-	width: 100%;
+	//width: 100%;
 	
 	ul
 	{
@@ -253,22 +267,21 @@ form #searchBg{
 		text-align: center;
 		margin:0;
 		padding:0;
-		width: 100%;
-		display:table;
-   		overflow: hidden;
-   		position: relative;
-   		left: 30%;
+		// width: 100%;
+		// display:table;
+  //  		overflow: hidden;
+  //  		position: relative;
+  //  		left: 30%;
 	}
 
 	ul li{
-		display: inline;
-		float:left;
+		display: inline-block;
+		//float:left;
 		height: 13rem;
 		width: 13rem;
 		margin-right: 0.5rem;
-		background-color: $darkTeal;
-		color: $navtext;
-
+		// background-color: $darkTeal;
+		// color: $navtext;
 	}
 	a{
 		display:block;
@@ -405,6 +418,9 @@ footer{
 	}
 		
 }
+
+//=============== icons
+
 
 
 
