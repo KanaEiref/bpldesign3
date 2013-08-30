@@ -47,7 +47,7 @@ you can use the generic selector below, but it's slower:
 .icon-books:before {
   content: "\6c";
   font-size: 2.5rem;
-  padding-top: 0.5rem; }
+  margin-top: 1rem; }
 
 .icon-trophy:before {
   content: "\6d"; }
@@ -149,7 +149,7 @@ a {
   color: white; }
 
 a:hover {
-  color: #009eb0; }
+  color: #ff5300; }
 
 h1 {
   font-size: 36px;
@@ -199,7 +199,9 @@ header[role=banner] {
   font-size: 2.0rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  margin-left: 1rem;
+  vertical-align: top; }
 
 #signIn {
   float: right;
@@ -214,14 +216,16 @@ header[role=banner] {
     vertical-align: top; }
 
 #search-form {
-  float: right; }
+  float: right;
+  padding: 1rem;
+  padding-top: 0.8rem;
+  margin-right: 2rem; }
 
 #bpl {
   display: inline-block;
   padding: 1rem; }
-
-#search-form {
-  padding: 1rem; }
+  #bpl .icon-menu {
+    display: none; }
 
 input[type="text"] {
   color: white;
@@ -289,7 +293,6 @@ form #searchBg {
     overflow: hidden; }
   #nav1 ul li {
     float: left;
-    padding: 2px;
     width: 16.6%;
     margin-left: auto;
     margin-right: auto; }
@@ -302,9 +305,11 @@ form #searchBg {
     font-weight: 300;
     font-style: normal;
     font-size: 1.7rem;
-    color: navText;
-    padding: 1em;
-    padding-bottom: 5rem; }
+    color: white;
+    padding: 1em; }
+  #nav1 a:hover {
+    color: #fffce5;
+    border-bottom: thick solid #ff906e; }
 
 #mobileMenu {
   display: none; }
@@ -312,6 +317,8 @@ form #searchBg {
 #nav2 {
   margin-top: 4rem;
   text-align: center; }
+  #nav2 .icon-car, #nav2 .icon-trophy, #nav2 .icon-book-alt2 {
+    font-size: 3rem; }
   #nav2 ul {
     list-style-type: none;
     text-align: center;
@@ -334,38 +341,72 @@ form #searchBg {
     padding: 5rem 1rem; }
     #nav2 a span {
       display: block; }
-  #nav2 li.current {
-    background-color: #009eb0;
-    color: white; }
-  #nav2 li.noncurrent {
-    background-color: #e3e3e3;
-    color: #777; }
-  #nav2 li.noncurrent a.events-button {
-    border-bottom: thick solid #005c9b; }
-  #nav2 li.noncurrent a.service-button {
-    border-bottom: thick solid #00c2d6; }
-  #nav2 li.noncurrent a.hours-locations-button {
-    border-bottom: thick solid #009eb0; }
+
+li.current1 {
+  background-color: #009eb0;
+  color: white; }
+
+li.current2 {
+  background-color: #005c9b;
+  color: white; }
+
+li.current3 {
+  background-color: #00c2d6;
+  color: white; }
+
+li.noncurrent {
+  background-color: #e3e3e3;
+  color: #777; }
+
+li.noncurrent a.events-button {
+  border-bottom: thick solid #005c9b; }
+
+li.noncurrent a.service-button {
+  border-bottom: thick solid #00c2d6; }
+
+li.noncurrent a.hours-locations-button {
+  border-bottom: thick solid #009eb0; }
 
 .container2 {
   clear: both;
   color: white;
   line-height: 1.5; }
-  .container2 #hourLocSec {
+  .container2 #hourLocSec, .container2 #servicesSec, .container2 #eventsSec {
     margin: 5rem 10%; }
   .container2 .titleBar {
     clear: both;
     background-color: #00c2d6;
     width: 100%;
     height: 5rem; }
-  .container2 h3 {
+    .container2 .titleBar .icon-car, .container2 .titleBar .icon-trophy, .container2 .titleBar .icon-book-alt2 {
+      vertical-align: bottom;
+      float: left;
+      font-size: 3rem;
+      padding-top: 1.5rem;
+      padding-left: 2rem; }
+  .container2 h2 {
     font-family: 'Lato', arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2.8rem;
-    margin-left: 5rem;
+    margin-left: 0.5rem;
     padding-top: 0.7rem;
-    float: left; }
+    float: left;
+    vertical-align: top; }
+  .container2 h3 {
+    font-family: 'Lato', arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.2rem;
+    margin-left: 0rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 4rem;
+    padding-right: 5rem;
+    vertical-align: top;
+    background-color: #005c9b;
+    text-align: center;
+    width: 100%; }
   .container2 .learnMore {
     display: inline;
     font-family: 'Lato', arial, sans-serif;
@@ -375,9 +416,11 @@ form #searchBg {
     float: right;
     background-color: #009eb0;
     border-radius: 10px;
-    padding: 0.8rem;
-    margin-top: 0.7rem;
-    margin-right: 0.7rem; }
+    padding: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-right: 1.3rem; }
   .container2 .col1, .container2 .col2 {
     width: 50%;
     float: left;
@@ -407,6 +450,13 @@ form #searchBg {
         font-style: normal;
         font-size: 1.6rem;
         color: black; }
+      .container2 .col1 .infoBlock a, .container2 .col2 .infoBlock a {
+        color: #005c9b; }
+
+#servicesSec .infoBlock {
+  padding-left: 5rem; }
+#servicesSec a {
+  color: black; }
 
 footer {
   clear: both;
@@ -420,11 +470,9 @@ footer {
   color: #e3e3e3; }
   footer ul {
     list-style-type: none;
-    text-align: center;
-    padding-left: 20%; }
+    text-align: center; }
   footer ul li {
-    display: inline;
-    float: left; }
+    display: inline-block; }
   footer a {
     display: block;
     padding: 2rem 1rem; }

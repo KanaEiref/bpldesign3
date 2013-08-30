@@ -107,6 +107,53 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$('.eventsLi').click(function(e){
+         e.preventDefault();
+         $('li.hoursLocations').removeClass("current1").addClass("noncurrent");
+         $('li.eventsLi').removeClass("noncurrent").addClass("current2");
+         $('li.services').removeClass("current3").addClass("noncurrent");
+
+         $('section#eventsSec').removeClass("hide").addClass("show");
+        $('section#hourLocSec').removeClass("show").addClass("hide");
+        $('section#servicesSec').removeClass("show").addClass("hide");
+        // $('section#eventsSec').slideToggle().show();
+        // $('section#hourLocSec').hide();
+        // $('seciton#servicesSec').hide();
+     });
+	$('.services').click(function(e){
+         e.preventDefault();
+         $('li.hoursLocations').removeClass("current1").addClass("noncurrent");
+         $('li.eventsLi').removeClass("current2").addClass("noncurrent");
+         $('li.services').removeClass("noncurrent").addClass("current3");
+         $('section#servicesSec').removeClass("hide").addClass("show");
+        $('section#hourLocSec').removeClass("show").addClass("hide");
+        $('section#eventsSec').removeClass("show").addClass("hide");
+        // $('section#eventsSec').slideToggle().show();
+        // $('section#hourLocSec').hide();
+        // $('seciton#servicesSec').hide();
+     });
+	$('.hoursLocations').click(function(e){
+         e.preventDefault();
+         $('li.hoursLocations').removeClass("noncurrent").addClass("current1");
+         $('li.eventsLi').removeClass("current2").addClass("noncurrent");
+         $('li.services').removeClass("current3").addClass("noncurrent");
+         $('section#hourLocSec').removeClass("hide").addClass("show");
+        $('section#eventsSec').removeClass("show").addClass("hide");
+        $('section#servicesSec').removeClass("show").addClass("hide");
+        // $('section#eventsSec').slideToggle().show();
+        // $('section#hourLocSec').hide();
+        // $('seciton#servicesSec').hide();
+     });
+
+	// $('.hoursLocations').click(function(e){
+ //        e.preventDefault();
+ //        $('section#exhibits').slideToggle().show();
+
+ //        $('div.search').hide();
+ //        $('div.visit').hide();
+ //        $('div.tours').hide();
+ //    });
+
 	document.addEventListener("DOMContentLoaded", function(){
 		// var iconsearch = document.getElementById('iconsearch');
 		// iconsearch.addEventListener("click", clickSearchEvent, false);
@@ -114,6 +161,7 @@ jQuery(document).ready(function($) {
 		// searchbox.addEventListener("keyup", searchEvent, false);
 		// var iconmenu = document.getElementById('iconmenu');
 		// iconmenu.addEventListener("click", clickmenuEvent, false);
+
 
 	}, false);	
 })();

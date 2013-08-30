@@ -42,7 +42,7 @@ you can use the generic selector below, but it's slower:
 .icon-books:before {
 	content: "\6c";
 	font-size:2.5rem;
-	padding-top: 0.5rem;
+	margin-top: 1rem;
 }
 .icon-trophy:before {
 	content: "\6d";

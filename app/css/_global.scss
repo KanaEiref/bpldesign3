@@ -62,13 +62,14 @@ body{
 	@include bodyType;
 
 
+
 }
 
 a { text-decoration: none;
 	color: $white;
 	}
 a:hover{
-	color: $darkTeal;
+	color: $red;
 }
 
 h1{
@@ -125,6 +126,8 @@ header[role=banner]{
 	font-size: 20px;
 	font-size:	2.0rem;		
 	@include latoRegular;	
+	margin-left:1rem;
+	vertical-align: top;
 }
 
 #signIn{
@@ -146,16 +149,21 @@ header[role=banner]{
 
 #search-form{
 	float: right;
+	padding: 1rem;
+	padding-top: 0.8rem;
+	margin-right: 2rem;
 }
 
 #bpl{
 	display: inline-block;
 	padding: 1rem;
+
+	.icon-menu{
+		display: none;
+	}
+
 }
 
- #search-form{
- 	padding: 1rem;
- }
 
 input[type="text"]{
 	color: $white;
@@ -232,7 +240,7 @@ form #searchBg{
 	ul li{
 		//display: inline;
 		float:left;
-		padding: 2px;
+		
 		width: 16.6%;
 		margin-left: auto;
 		margin-right: auto;
@@ -243,9 +251,14 @@ form #searchBg{
 		font-size: 1.5rem;
 		height: 5rem;
 		@include nav1Text;
-		color: navText;
+		color: $white;
 		padding: 1em;
-		padding-bottom: 5rem;
+		
+	}
+
+	a:hover{
+		color:$navtext;
+		border-bottom: thick solid $lightRed;;
 	}
 }
 
@@ -260,6 +273,10 @@ form #searchBg{
 	// clear: both;
 	text-align: center;
 	//width: 100%;
+
+	.icon-car, .icon-trophy, .icon-book-alt2{
+		font-size: 3rem;
+	}
 	
 	ul
 	{
@@ -295,34 +312,47 @@ form #searchBg{
 		span{
 			display: block;
 		}
-	}
+	}	
+}
 
-	li.current{
+li.current1{
 		background-color: $darkTeal;
 		color: $white;
 	}
 
-	li.noncurrent{
-		background-color: #e3e3e3;
-		color: #777;		
+li.current2{
+		background-color: $blue;
+		color: $white;
 	}
 
-	li.noncurrent a.events-button{
-		border-bottom:thick solid $blue;
+li.current3{
+		background-color: $lightTeal;
+		color: $white;
 	}
 
-	li.noncurrent a.service-button{
-		border-bottom:thick solid $lightTeal;
-	}
-	li.noncurrent a.hours-locations-button{
-		border-bottom:thick solid $darkTeal;
-	}
+li.noncurrent{
+	background-color: #e3e3e3;
+	color: #777;		
 }
+
+li.noncurrent a.events-button{
+	border-bottom:thick solid $blue;
+}
+
+li.noncurrent a.service-button{
+	border-bottom:thick solid $lightTeal;
+}
+li.noncurrent a.hours-locations-button{
+	border-bottom:thick solid $darkTeal;
+}
+
 .container2{
 	clear: both;
 	color: $white;
 	line-height: 1.5;
-	#hourLocSec{
+
+
+	#hourLocSec, #servicesSec, #eventsSec{
 		margin: 5rem 10%;
 	}
 
@@ -331,13 +361,38 @@ form #searchBg{
 		background-color: $lightTeal;
 		width: 100%;
 		height: 5rem;
+
+		.icon-car, .icon-trophy, .icon-book-alt2{
+			vertical-align: bottom;
+			
+			float:left;
+			font-size: 3rem;
+			padding-top: 1.5rem;
+	
+			padding-left: 2rem;
+		}
+	}
+
+	h2{
+		@include h2Text;
+		margin-left: 0.5rem;	
+		padding-top: 0.7rem;
+		float: left;
+		vertical-align: top;	
 	}
 
 	h3{
 		@include h3Text;
-		margin-left: 5rem;	
+		margin-left: 0rem;	
 		padding-top: 0.7rem;
-		float: left;	
+		padding-bottom: 0.7rem;
+		padding-left: 4rem;
+		padding-right: 5rem;
+		//float: left;
+		vertical-align: top;	
+		background-color: $blue;
+		text-align: center;
+		width: 100%;
 	}
 
 	.learnMore
@@ -347,9 +402,11 @@ form #searchBg{
 		float: right;
 		background-color: $darkTeal;
 		border-radius: 10px;
-		padding: 0.8rem;
-		margin-top: 0.7rem;
-		margin-right: 0.7rem;
+		padding: 0.4rem;
+		padding-left:1rem;
+		padding-right: 1rem;
+		margin-top: 1rem;
+		margin-right: 1.3rem;
 	}
 
 	.col1, .col2{
@@ -363,29 +420,47 @@ form #searchBg{
 			border-bottom-style: none;
 		}
 
-		.infoBlock{
-		border-bottom: thin solid $lightGray;
-		padding-top: 0.7rem;
-		padding-bottom: 0.7rem;
+		.infoBlock
+		{
+			border-bottom: thin solid $lightGray;
+			padding-top: 0.7rem;
+			padding-bottom: 0.7rem;
 
-		& h4{
-			@include h4Text;
-			color: $libname;
+			& h4{
+				@include h4Text;
+				color: $libname;
+			}
+
+			& p.primaryDetail{
+				@include blueText;
+				color: $blue;
+			}
+
+			& p.secondaryDetail{
+				@include timeText;
+				color: $black;
+			}
+
+			a{
+				color: $blue;
+			}
+
+			
 		}
 
-		& p.primaryDetail{
-			@include blueText;
-			color: $blue;
-		}
 
-		& p.secondaryDetail{
-			@include timeText;
-			color: $black;
-		}
-	}
 	}
 
 	
+}
+
+#servicesSec{
+	.infoBlock{
+		padding-left:5rem;
+	}
+	a{
+		color: $black;
+	}
 }
 
 footer{
@@ -399,12 +474,12 @@ footer{
 	{
 		list-style-type:none;
 		text-align: center;
-		padding-left:20%;
+		
 	}
 
 	ul li{
-		display: inline;
-		float:left;
+		display: inline-block;
+		//float:left;
 	}
 
 	a{
@@ -419,7 +494,6 @@ footer{
 		
 }
 
-//=============== icons
 
 
 

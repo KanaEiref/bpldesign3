@@ -106,10 +106,16 @@
   font-size: 1.7rem;
 }
 
-@mixin h3Text{
+@mixin h2Text{
   font-family: 'Lato', arial, sans-serif;
   font-weight: 400; font-style: normal;
   font-size: 2.8rem;
+}
+
+@mixin h3Text{
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 300; font-style: normal;
+  font-size: 2.2rem;
 }
 
 @mixin h4Text{
