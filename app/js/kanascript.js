@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 	"use strict";
 
 	function clickmenuEvent(event){
-		$('#mobileMenu').removeClass("offmenu").toggleClass("onmenu");
+		$('#mobileMenu').toggleClass("onmenu");
 	}
 
 	function clickSearchEvent(event){

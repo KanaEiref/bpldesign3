@@ -550,7 +550,8 @@ footer{
 		float:left;}
 }
 
-@media screen and (max-width: 375px){
+//should be 375px, but set to 450 for demo purpose
+@media screen and (max-width: 450px){
 	#nav1, .icon-books{
 		display: none;
 	}
@@ -567,6 +568,7 @@ footer{
 		display: inline;
 		float: left;
 		vertical-align: center;
+		margin-top: 0.5rem;
 	}
 
 	#nav2{
