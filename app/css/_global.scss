@@ -147,6 +147,8 @@ header[role=banner]{
 	}
 }
 
+
+
 #search-form{
 	float: right;
 	padding: 1rem;
@@ -261,11 +263,6 @@ form #searchBg{
 		border-bottom: thick solid $lightRed;;
 	}
 }
-
-#mobileMenu{
-	display: none;
-}
-
 #nav2{
 	 margin-top: 4rem;
 	// margin-right: auto;
@@ -356,23 +353,6 @@ li.noncurrent a.hours-locations-button{
 		margin: 5rem 10%;
 	}
 
-	.titleBar{
-		clear: both;
-		background-color: $lightTeal;
-		width: 100%;
-		height: 5rem;
-
-		.icon-car, .icon-trophy, .icon-book-alt2{
-			vertical-align: bottom;
-			
-			float:left;
-			font-size: 3rem;
-			padding-top: 1.5rem;
-	
-			padding-left: 2rem;
-		}
-	}
-
 	h2{
 		@include h2Text;
 		margin-left: 0.5rem;	
@@ -393,6 +373,24 @@ li.noncurrent a.hours-locations-button{
 		background-color: $blue;
 		text-align: center;
 		width: 100%;
+	}
+
+	.titleBar{
+		clear: both;
+		background-color: $lightTeal;
+		width: 100%;
+		height: 5rem;
+		margin-bottom: 1rem;
+
+		.icon-car, .icon-trophy, .icon-book-alt2{
+			vertical-align: bottom;
+			
+			float:left;
+			font-size: 3rem;
+			padding-top: 1.5rem;
+	
+			padding-left: 2rem;
+		}
 	}
 
 	.learnMore
@@ -443,16 +441,12 @@ li.noncurrent a.hours-locations-button{
 
 			a{
 				color: $blue;
-			}
-
-			
+			}			
 		}
-
-
-	}
-
-	
+	}	
 }
+
+
 
 #servicesSec{
 	.infoBlock{
@@ -462,6 +456,7 @@ li.noncurrent a.hours-locations-button{
 		color: $black;
 	}
 }
+
 
 footer{
 	clear: both;
@@ -493,6 +488,188 @@ footer{
 	}
 		
 }
+
+.offmenu{
+	position: absolute;
+	top: 10em;
+	left: -100em;
+}
+
+@media screen and (max-width: 684px){
+	#nav1{
+		li{
+			padding-top:1rem;
+			padding-bottom:0rem;
+			margin-bottom:0rem;
+		}
+
+		li a {
+			font-size: 1.3rem;
+			padding:0.5rem;
+			padding-bottom:0rem;
+			margin-bottom:0rem; // need to fix this, bar still have distances
+		}
+	}
+}
+
+@media screen and (max-width: 563px){
+	#hlBg{
+		position: static;
+		width:100%;
+		height:10rem;
+	}
+
+	.todayHighlights{
+			font-size: 1.5rem;
+		}
+
+	.bg{
+		display: none;
+	}
+
+	.topGrayNav{
+		position: static;
+	}
+
+	#search-form{
+		clear: both;
+		position: static;
+		width:100%;
+		padding-right: 0rem;
+		margin-right: 0;
+
+	}
+
+	input[type="text"]
+	{
+		margin-left: 1rem;
+		width:85%;
+		float:left;
+	}
+	form #searchBg { 
+		float:left;}
+}
+
+@media screen and (max-width: 375px){
+	#nav1, .icon-books{
+		display: none;
+	}
+
+	.icon-menu{
+		display: block !important;
+		float:left;
+		margin-top: 0.5rem;
+		font-size: 2rem;
+		color: $red;
+	}
+	.logo{
+		font-size: 1.7rem;
+		display: inline;
+		float: left;
+		vertical-align: center;
+	}
+
+	#nav2{
+		margin-top: 0;
+	}
+
+	#nav2 ul li{
+		display: block;
+		height: 6rem;
+		width:100%;
+		margin-right: 0;
+	}
+
+	#nav2 a {
+		padding:0;
+		text-align: center;
+		padding-top: 1rem;
+	}
+
+	#nav2 a span {
+		display: inline;		
+		}
+	#nav2 .icon-car, #nav2 .icon-trophy, #nav2 .icon-book-alt2 {
+		margin-right: 1rem;
+		padding-top: 1rem;
+		}
+	.container2 .learnMore{ display: none};
+
+	.container2 #hourLocSec, .container2 #servicesSec, .container2 #eventsSec {
+		margin: 1rem 0;
+		}
+
+	.container2 .col1, .container2 .col2 {
+	width: 50%;
+	float: left;
+	padding-left: 0.5rem;
+	}
+
+	.onmenu{
+		position: fixed;
+		width: 90%;
+		top: 2em;
+		left: 0;
+		z-index: 1337;
+		background-color: rgba(33, 198, 221, 0.9);
+		color: $white;
+
+		-webkit-transition: all 0.35s ease-in-out;
+		-moz-transition: all 0.35s ease-in-out;
+		-o-transition: all 0.35s ease-in-out;
+		transition: all 0.35s ease-in-out;
+		font-size: 1.8rem;
+
+		a{
+			display:block;
+			color: inherit;
+			width: 75%;
+			//float: left;
+			height: 6rem;
+			line-height: 1.85rem;
+			max-height: 25%;
+			text-align: center;
+			border: none;
+			border-right: 0.15em solid rgba(255, 255, 255, 0.4);
+			padding-top: 1em;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+
+			text-align: top;
+			@include latoLight;
+			font-size: 1.6rem;
+		}
+
+		a:hover{
+			color: $white;
+			text-shadow: 0 0 0.025em rgba(200,200,200,0.1);
+			background: rgba(221,160,221, 0.6);
+		}
+
+		a:active {
+			text-decoration: none;
+			color: rgba(255, 255, 255, 0.9);
+
+			border-bottom: 0.1em solid rgba(255, 255, 255, 0.3);
+			padding-bottom: .15em;
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+
+		
+
+		div:nth-child(1) a 
+		{
+			border-bottom: 0.15em solid rgba(255, 255, 255, 0.4);
+		}
+
+	}
+
+}
+
+
 
 
 

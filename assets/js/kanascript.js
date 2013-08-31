@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 	"use strict";
 
 	function clickmenuEvent(event){
-		$('#mobileMenu').toggleClass("onmenu");
+		$('#mobileMenu').removeClass("offmenu").toggleClass("onmenu");
 	}
 
 	function clickSearchEvent(event){
@@ -159,8 +159,8 @@ jQuery(document).ready(function($) {
 		// iconsearch.addEventListener("click", clickSearchEvent, false);
 		// var searchbox = document.getElementById('searchbox');
 		// searchbox.addEventListener("keyup", searchEvent, false);
-		// var iconmenu = document.getElementById('iconmenu');
-		// iconmenu.addEventListener("click", clickmenuEvent, false);
+		var iconmenu = document.getElementById('iconmenu');
+		iconmenu.addEventListener("click", clickmenuEvent, false);
 
 
 	}, false);	
