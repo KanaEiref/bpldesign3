@@ -315,7 +315,8 @@ form #searchBg {
   margin-top: 4rem;
   text-align: center; }
   #nav2 .icon-car, #nav2 .icon-trophy, #nav2 .icon-book-alt2 {
-    font-size: 3rem; }
+    font-size: 3rem;
+    height: 3rem; }
   #nav2 ul {
     list-style-type: none;
     text-align: center;
