@@ -379,7 +379,7 @@ li.noncurrent a.hours-locations-button{
 
 	.titleBar{
 		clear: both;
-		background-color: $lightTeal;
+		background-color: $bestBlue;
 		width: 100%;
 		height: 5rem;
 		margin-bottom: 1rem;
@@ -620,7 +620,8 @@ footer{
 		top: 2em;
 		left: 0;
 		z-index: 1337;
-		background-color: rgba(33, 198, 221, 0.9);
+		//background-color: rgba(33, 198, 221, 0.9);
+		background-color: $bestBlue;
 		color: $white;
 
 		-webkit-transition: all 0.35s ease-in-out;
