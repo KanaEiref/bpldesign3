@@ -352,7 +352,7 @@ li.current3 {
   color: white; }
 
 li.noncurrent {
-  background-color: #e3e3e3;
+  background-color: #999999;
   color: #777; }
 
 li.noncurrent a.events-button {
