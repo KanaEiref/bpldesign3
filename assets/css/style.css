@@ -422,15 +422,15 @@ li.noncurrent a.hours-locations-button {
     margin-right: 1.3rem; }
   .container2 .col1, .container2 .col2 {
     width: 50%;
-    float: left;
-    padding-left: 5rem; }
+    float: left; }
     .container2 .col1:last-child, .container2 .col2:last-child {
       padding-bottom: 10rem;
       border-bottom-style: none; }
     .container2 .col1 .infoBlock, .container2 .col2 .infoBlock {
       border-bottom: thin solid #e3e3e3;
       padding-top: 0.7rem;
-      padding-bottom: 0.7rem; }
+      padding-bottom: 0.7rem;
+      padding-left: 5rem; }
       .container2 .col1 .infoBlock h4, .container2 .col2 .infoBlock h4 {
         font-family: 'Lato', arial, sans-serif;
         font-weight: 300;
@@ -527,6 +527,7 @@ footer {
   .container2 .col1, .container2 .col2 {
     width: 100%;
     clear: both;
+    padding-left: 0rem;
     margin-left: auto;
     margin-right: auto; } }
 @media screen and (max-width: 450px) {
