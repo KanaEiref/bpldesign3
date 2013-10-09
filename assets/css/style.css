@@ -177,7 +177,7 @@ h3 {
   transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
   width: 100%;
   max-width: 100%;
-  background-size: cover; }
+  background-size: cover; background-position: center;}
 
 header {
   color: white; }
